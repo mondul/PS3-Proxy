@@ -81,7 +81,7 @@ func main() {
 
     proxy := goproxy.NewProxyHttpServer()
 
-    proxy.OnRequest(goproxy.UrlMatches(regexp.MustCompile(`fus01\.ps3\.update\.playstation\.net\/update\/ps3\/list\/..\/ps3-updatelist\.txt`))).DoFunc(
+    proxy.OnRequest(goproxy.UrlMatches(regexp.MustCompile(`f..01\.ps3\.update\.playstation\.net\/update\/ps3\/list\/..\/ps3-updatelist\.txt`))).DoFunc(
         func(r *http.Request, ctx *goproxy.ProxyCtx) (*http.Request, *http.Response) {
             log.Println("[*] PS3 update query blocked")
 
