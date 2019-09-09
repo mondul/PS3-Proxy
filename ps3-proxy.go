@@ -8,6 +8,7 @@ import (
     "bytes"
     "log"
     "net"
+    "os"
 )
 
 func ExternalIP() (string) {
@@ -100,6 +101,19 @@ func main() {
                 "File not found")
         })
 
-    log.Println("[*] Starting PS3 proxy at " + ExternalIP() + ":8080 ...")
-    http.ListenAndServe(":8080", proxy)
+    if !(len(os.Args) == 1 || len(os.Args) == 3) {
+        log.Println("Usage: ps3-proxy <IP> <PORT>")
+    } else {
+        var ip, port string
+        if len(os.Args) == 1 {
+            ip = ExternalIP()
+            port = "8080"
+        } else {
+            ip = os.Args[1]
+            port = os.Args[2]
+        }
+        bind := ip + ":" + port
+        log.Println("[*] Starting PS3 proxy at " + bind + " ...")
+        http.ListenAndServe(bind, proxy)
+    }
 }
