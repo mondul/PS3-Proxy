@@ -14,6 +14,6 @@ If you want to use PS3 proxy in your Linux machine/vps/whatever, here's what you
 * Once it's done, do ``go run ps3-proxy.go`` and you are ready to go
 
 ## Thanks to:
-[@elazarl](https://github.com/elazarl) for his goproxy library and examples. Without it this script would not be possible.
-[@justkamiii](https://github.com/justkamiii) for testing this software on Linux and documenting how to use it
+[@elazarl](https://github.com/elazarl) for his goproxy library and examples. Without it this script would not be possible.  
+[@justkamiii](https://github.com/justkamiii) for testing this software on Linux and documenting how to use it  
 [//]: # (mmm, yes, self credit)
